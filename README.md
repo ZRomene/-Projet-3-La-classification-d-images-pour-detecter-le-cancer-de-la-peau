@@ -5,8 +5,11 @@ Le but de ce projet est d'analyser les images afin de détecter la présence d'u
 
 # Table Of Contents
 [1- Matériel utilisé (Hardware)]()
+
 [2- La base de données (Database)]()
+
 [3- Entrainement du modéle et résultats]()
+
 &nbsp;&nbsp;&nbsp;&nbsp; [3-1- Méthode1: Entraînement du modéle avec EDGE IMPULSE]()
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [3-1-1-Le software utilisé]()
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [3-1-2-Les étapes d'entrainement]()
