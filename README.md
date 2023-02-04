@@ -4,25 +4,25 @@
 Le but de ce projet est d'analyser les images afin de détecter la présence d'un cancer de la peau. Puisque c'est un projet académique, on s'est concentré sur un seul type de cancer "le mélanome". Il s'agit alors d'une classification binaire. C'est-à-dire l'algorithme détecte s'il s'agit d'un cancer mélanome ou bien un cas normal. À chaque fois le mélanome est détecté  avec un pourcentage qui dépasse 80%, on fait clignoter la LED. Ceci est fait à l'aide d'un modèle d'intelligence artificielle qu'on va entrainer de deux manières différentes.
 
 # Table des matières
-[1- Matériel utilisé (Hardware)]()   
-[2- La base de données (Database) ]()    
-[3- Entrainement du modéle et résultats]()      
-&nbsp;&nbsp;&nbsp;&nbsp; [3-1- Méthode1: Entraînement du modéle avec EDGE IMPULSE]()   
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [3-1-1-Le software utilisé]()  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [3-1-2-Les étapes d'entrainement]()  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [3-1-2-1- Connecter la carte au compte Edge Impulse]()  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [3-1-2-2- Acquérir des données]()  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [3-1-2-3- Créer une impulse]()  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [3-1-2-4- Former le modèle]()  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [3-1-2-5- Tester est télécharger le modèle]()  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [3-1-3- Partie Arduino (Méthode1)]()  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [3-1-4- Résultat (Méthode1)]()  
-&nbsp;&nbsp;&nbsp;&nbsp;  [3-2- Méthode2: Entrainement du modéle avec Jupyter Notebook]()  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [3-2-1- Le software utilisé]()  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [3-2-2- Les étapes d'entrainement]()  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [3-2-3- Partie Arduino (Méthode2)]()  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [3-2-4- Résultat (Méthode2)]()  
-[Ressouces](#Ressources)  
+1- Matériel utilisé (Hardware)   
+2- La base de données (Database)     
+3- Entrainement du modéle et résultats   
+&nbsp;&nbsp;&nbsp;&nbsp;3-1- Méthode1: Entraînement du modéle avec EDGE IMPULSE  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3-1-1-Le software utilisé  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3-1-2-Les étapes d'entrainement  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3-1-2-1- Connecter la carte au compte Edge Impulse  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3-1-2-2- Acquérir des données  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3-1-2-3- Créer une impulse  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3-1-2-4- Former le modèle    
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3-1-2-5- Tester est télécharger le modèle  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3-1-3- Partie Arduino (Méthode1)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3-1-4- Résultat (Méthode1)  
+&nbsp;&nbsp;&nbsp;&nbsp;  3-2- Méthode2: Entrainement du modéle avec Jupyter Notebook  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3-2-1- Le software utilisé  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3-2-2- Les étapes d'entrainement   
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3-2-3- Partie Arduino (Méthode2)   
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3-2-4- Résultat (Méthode2)  
+Ressouces
 
 ## 1- Matériel utilisé (Hardware)
 Nous utilisons le Kit d'apprentissage Tiny ML d'arduino pour explorer l'Embedded Machine Learning.C'est une nouvelle technologie qui active l'intelligence artificielle juste à côté du monde physique à l'aide des données récupérées par les capteurs. Ce kit comprend un Arduino Nano 33 BLE Sense. Il est basé sur le microcontrôleur nRF52840 et fonctionne sur le système d'exploitation Arm® Mbed™. Le Nano 33 BLE Sense offre non seulement la possibilité de se connecter via Bluetooth® Low Energy, mais est également équipée de capteurs pour détecter la couleur, la proximité, le mouvement, la température, l'humidité, l'audio et plus encore. Vous pouvez cliquer sur l'image ci-dessous pour plus de détails ou bien il suffit de lire [le datasheet de la carte][df4].  
