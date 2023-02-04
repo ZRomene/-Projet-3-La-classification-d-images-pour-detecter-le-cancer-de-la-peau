@@ -66,11 +66,12 @@ La couleur de la peau humaine normale est, dans la majorité des cas, homogène,
 ## 3- Entrainement du modéle et résultats
 ### 3-1- Méthode1: Entrainement du modéle avec EDGE IMPULSE
 #### 3-1-1- Le software utilisé
-Edge Impulse c'est un site qui permet de faire l'acquisition des données qui serviront à entrainer une IA. L'acquisition peut être faite à l'aide des capteurs du capteur ou bien par plusieurs autres alternatives.En proposant, une approche simplifiée de l'intelligence artificielle à l'aide des blocs, il permet d'entrainer le modèle avec la possibilité de personnaliser les paramètres. Ensuite, il fournit le code à implanter dans le microcontrôleur afin d'utiliser le réseau entrainé ous peuvent avoir plus d'informations en cliquant sur l'image suivante:
-arduino.png
-[![N|Solid](EdgeImpulse.png)](https://www.edgeimpulse.com/) 
-Bien évidemment , on utilise l'IDE de la carte Arduino pour la programmation de la carte et pour utiliser le modèle entrainé. Vous pouvez avoir plus d'informations en cliquant sur l'image suivante:
-[![N|Solid](arduino.png)](https://www.arduino.cc/)
+Edge Impulse c'est un site qui permet de faire l'acquisition des données qui serviront à entrainer une IA. L'acquisition peut être faite à l'aide des capteurs du capteur ou bien par plusieurs autres alternatives.En proposant, une approche simplifiée de l'intelligence artificielle à l'aide des blocs, il permet d'entrainer le modèle avec la possibilité de personnaliser les paramètres. Ensuite, il fournit le code à implanter dans le microcontrôleur afin d'utiliser le réseau entrainé ous peuvent avoir plus d'informations en cliquant sur l'image suivante:  
+
+[![N|Solid](EdgeImpulse.png)](https://www.edgeimpulse.com/)  
+
+Bien évidemment , on utilise l'IDE de la carte Arduino pour la programmation de la carte et pour utiliser le modèle entrainé. Vous pouvez avoir plus d'informations en cliquant sur l'image suivante:  
+[![N|Solid](arduino.png)](https://www.arduino.cc/)  
 
 #### 3-1-2- Les étapes d'entrainement
 ##### 3-1-2-1- Connecter la carte au compte Edge Impulse
