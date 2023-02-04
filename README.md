@@ -85,9 +85,11 @@ Ceci va nous permettre de connecter la carte directement au compte Edge Impulse 
 ##### 3-1-2-2- Acquérir des données
 Une fois les images téléchargées et étiquetées, il faut s'assurer d'avoir un bon ratio de répartition des données d'entraînement / test d'environ 80/20 pour les données de tests et pour les données d'entrainement.
 
+
 ![](testing_data.png "Données de test")
 
-![](Training_data.png "Données d'entraînement")
+
+![](Training_data.png "Données d'entraînement")  
 
 ##### 3-1-2-3- Créer une impulse 
 Dans le menu, accédez à "Créer Impulse" sous "Impulse Design" et ajoutez un bloc de traitement d'images ainsi qu'un bloc d'apprentissage Transfer Learning 
@@ -96,29 +98,29 @@ Dans le menu, accédez à "Créer Impulse" sous "Impulse Design" et ajoutez un b
 
 J'ai remarqué que la taille de l'image affecte directement la taille de modèle et la précision du modèle. En premier lieu j'ai utilisé des images 48x48. Puis, j'ai opté ensuite pour des images de taille 96x96 de haute résolution. C'est la meilleure option à choisir pour avoir le meilleur rapport précision/taille  après beaucoup des tests faits. 
 
-![] (impulse.png)
+![](impulse.png)  
 
 On passe ensuite à la génération des caractéristiques à partir des données d'entrée. J'ai réglé la profondeur de couleur sur "RVB" et enregistrez les paramètres. On obtient une visualisation 2D. Cette dernière permet d'inspecter visuellement les groupes d'images en ce qui concerne leurs propriétés.
 
-![] (Generate_features.png " Visualisation 2D")
+![](Generate_features.png " Visualisation 2D")  
 
 ##### 3-1-2-4- Former le modèle 
 Suite à l'utilisation de mobile net V2 0.35, j'ai obtenu un modèle qui occupe 346.9k de la RAM. Ceci est inacceptable étant donnée que la RAM de ma carte est 256k. Pour corriger ce problème, j'avais le choix entre réduire les dimensions des images utilisées et changer l'architecture du modèle au Mobile Net V2 0.2. Après plusieurs essais, j'ai opté pour le changement de l'architecture. 
 
-![] (parametres.png “”)
+![](parametres.png “”)  
 
 Le choix prix m'a donné des résultats très satisfaisantes. La précision de modèle est de 98.6%. Et le taille de modèle est 130.9k ce qui est totalement acceptable (<256 k).
 
-![] (resultat.png “”)
+![](resultat.png “”)  
 
 ##### 3-1-2-5- Tester est télécharger le modèle 
 Afin de vérifier les perfomances du modéle, j'ai testé le modéle sur Edge Impulse avant de le déployer.
 
-![] (testing.png)
+![](testing.png)  
 
 Le modèle ML est formé et déjà optimisé pour être utilisé avec des microcontrôleurs. Cela se fait automatiquement en arrière-plan grâce à la quantification. 
 
-![] (telecharger.png) 
+![](telecharger.png)   
 
 On déploie alors le modèle et on le télécharge sous format  zip.
 
@@ -129,7 +131,7 @@ On commence par essayer le code et vérifier qu'il n’y a pas des problèmes à
 ```sh
 Serial.println("Done by : Zaynab ROMENE");
 ```
-![] (arduino_serial_jupyter.png)
+![](arduino_serial_jupyter.png)  
 
 On ajoute aussi les lignes de code qui permettent d'allumer la LED rouge si un cancer est détecté et allumer la LED verte is la peau est saine. 
 
@@ -156,9 +158,9 @@ On ajoute aussi les lignes de code qui permettent d'allumer la LED rouge si un c
 #### 3-1-4- Résultat (Méthode1)
 Après plusieurs tests, j'ai remarqué que les résultats du modèle sont bien précis et que la caméra est performante pour cette application. Les pourcentages affiches sont toujours supérieurs à 85% comme il est montré dans les photos suivantes.
 
-![] (cancer_result_EdgeImpulse.jpg "Le cancer est détecté avec un pourcentage de 0.99609 ")
+![](cancer_result_EdgeImpulse.jpg "Le cancer est détecté avec un pourcentage de 0.99609 ")  
 
-![] (safe_result_jupyter.jpg "La peau est considérée saine avec un pourcentage de 0.96875 ")
+![](safe_result_jupyter.jpg "La peau est considérée saine avec un pourcentage de 0.96875 ")  
 
 ### 3-2- Méthode2: Entraînement du modéle avec Jupyter Notebook
 #### 3-2-1- Le software utilisé
@@ -177,38 +179,38 @@ Bien évidemment, je me suis inspirée des tutoriels et des expériences des aut
 La première étape consiste à l'installation des bibliothéques. J'ai utilisé *TensorFlow Lite Model Maker* pour créer un modèle avec mon ensemble de données personnalisé. La bibliothèque TensorFlow Lite Model Maker simplifie le processus d'adaptation et de conversion d'un modèle de réseau de neurones TensorFlow en données d'entrée particulières lors du déploiement de ce modèle pour les applications ML sur l'appareil. 
 On télécharge aussi d'autres bibliothéques indisponsables pour le fonctionnement du modèle.
 
-![] (1.png)
+![](1.png)  
 
-![] (2.png)
+![](2.png)  
 
 La deuxième étape est la préparation de la base de données. On met toute les images dans un endroit bien spécifique dans le drive. Ce sont  des images appartenant à deux classes (Cancer_Skin ou Safe_Skin). Cet ensemble de données est conçu pour être utile pour l'analyse comparative et le test de la vision par ordinateur embarquée, car il représente une tâche très courante, à savoir la classification binaire, que nous devons accomplir avec des contraintes de ressources strictes. 
 Puis, on définit le chemin d'accès à nos données d'image. 
 
-![] (3.png)
+![](3.png)  
 
 Pour éviter les problèmes qui se produisent pendant le téléchargement, il faut éliminer  le .ipynb_checkpointqui est un dossier caché. Un correctif pour cela est que vous pouvez supprimer manuellement le dossier en utilisant:
 
-![] (4.png)
+![](4.png)  
 
 Pour utiliser les données, il faut faire des répartitions. La première répartition est de 80/20 entre les données d'entraînement et les données de test et validation.
 
-![] (5.png)
+![](5.png)  
 
 La deuxième répartition est de 50/50 des données de test et validation (20% de toute la data) en données de test et données de validation (séparées).
 
-![] (6.png)
+![](6.png)  
 
 On peut afficher 25 exemples d'images avec des étiquettes (labels) juste pour vérifier que les deux classes (catégories) d'images ont été bien lues.
 
-![] (7.png)
+![](7.png)  
 
 On installe la version 2.7 de tensor flow afin de corriger un problème de compilation du modèle.
 
-![] (8.png)
+![](8.png)  
 
 Python a de nombreux modules dans sa bibliothèque standard, et celui qui aide ici est imghdr. Il vous permet d'identifier le type d'image contenu dans un fichier. L'imghdr peut reconnaître les types d'images suivants : rgb, gif, pbm, pgm, ppm, tiff, rast, xbm, jpeg/jpg, bmp, png, webp et exr. C'est indispensable de vérifier si l'image est utilisable ou non avant de générer le modèle. On peut  rechercher un type d'image, pas un nom d'extension, par le code suivant:
 
-![] (9.png)
+![](9.png)  
 
 On passe maintenant à l'entraînement du modèle. Les paramaitres sont:
 - Les données d'entraînement seront utilisées pour réellement former le modèle.
@@ -218,27 +220,27 @@ On passe maintenant à l'entraînement du modèle. Les paramaitres sont:
 
 J'ai utilisé EfficientNet-Lite*, MobileNetV2, ResNet50 en tant que modèles pré-formés pour la classification des images. Mais il est possible d'ajouter de nouveaux modèles pré-formés à cette bibliothèque avec seulement quelques lignes de code.
 
-![] (10.png)
+![](10.png)  
 
 Lorsque l'exécution se termine, on évalue le modèle en utilisant les données de test qu'il n'a jamais vues auparavant. Cette comparaison avec les données de test "test_data" nous donne une idée sur l'adaptabilité de modèle et ses performances.
 
-![] (11.png)
+![](11.png)  
 
 Ensuite, On convertit le modèle existant au format de modèle TensorFlow Lite et on enregistre les étiquettes d'image dans le fichier d'étiquettes (labels). Le nom de fichier TFLite par défaut est model.tflite, le nom de fichier d'étiquette ( fichier qui contient les labels) est label.txt. 
 
-![] (12.png)
+![](12.png)  
 
 TensorFlow inclut une classe de conversion qui nous permet de convertir un modèle Keras en un modèle TensorFlow Lite. Le modèle TensorFlow Lite est stocké en tant que FlatBuffer , ce qui est utile pour lire de gros morceaux de données une pièce à la fois (plutôt que de devoir tout charger dans la RAM). Autrement dit, c'est ce qui nous permettra de charger le modèle et de l'utiliser pour l'inférence avec la bibliothèque TensorFlow Lite for Microcontrollers.
 
-![] (tensorflow.png)
+![](tensorflow.png)  
 
 Voici la structure détaillée du modèle:
 
-![] (13.png)
+![](13.png)  
 
 On obtient au final un fichier "model .tflite" (dans le dossier '/content/') , mais la plupart des appareils intégrés n'ont pas de système de fichiers. Pour accéder aux données sérialisées de notre programme, nous devons les compiler dans l'exécutable et les stocker en Flash. La façon la plus simple de le faire est de convertir le fichier en un fichier .cc .
 
-![] (14.png)
+![](14.png)  
 
 Le fichier "model .cc"  obtenu va être intégré dans la bibliothéque Arduino pour utiliser le modèle.
 
@@ -246,7 +248,7 @@ Le fichier "model .cc"  obtenu va être intégré dans la bibliothéque Arduino 
 On a utilisé Tensorflow light pour la génération du modèle. Plus précisément, on a utilisé le modèle de classification d'images *efficientnet_lite0*. 
 La famille de modèles de réseaux de neurones EfficientNet a été conçue pour une meilleure performance en termes de vitesse et de consommation de ressources pour les applications mobiles et l'Internet des objets. Il se concentre sur une optimisation efficace de la largeur et de la profondeur du réseau pour atteindre un équilibre entre la précision et les coûts de calcul(stockage).
 
-![] (efficient_lite.png )
+![](efficient_lite.png)  
 
 Et malgré ceci, la taille du modèle (25125 kB) dépasse la RAM(256 kB) de la carte. 
 J'ai choisi alors de changer le modèle et d'utiliser MobileNet-V2-Spec (c'esr ce que j'ai fait sur EDGE IMPULSE). C'est une spécification pour un modèle de réseau neuronal convolutionnel conçu pour les appareils mobiles et l'Internet des objets (IoT). C'est une version améliorée de MobileNet-V1, qui a été conçue pour être plus rapide et plus efficace en termes de consommation de ressources. Le MobileNet-V2-Spec utilise une approche de conception innovante appelée "inverted residuals" pour améliorer les performances du modèle. Il se concentre sur l'obtention d'un équilibre entre la précision et les coûts de calcul pour les applications mobiles et IoT à faible consommation de ressources.
@@ -273,11 +275,11 @@ Model Maker prend en charge plusieurs options de quantification post-formation. 
 
 On ajoute alors au notebook :
 
-![] (15.png )
+![](15.png)  
 
-![] (16.png )
+![](16.png)  
 
-![] (17.png )
+![](17.png)  
 
 #### 3-2-3- Partie Arduino (Méthode2) 
 Dans cette partie et pour déployer le modèle, on va utiliser directement le fichier "model .cc". j'ai choisi dans cette partie d'utiliser un code exemple qui existe déjà qui est *person_detection* de la bibilothéque Harvard_Tiny_MLx. Il s'agit aussi d'une classification binaire et une détection de la présence ou absence d'un sujet bien précis. 
