@@ -294,7 +294,7 @@ On ajoute alors "model.cpp" dans le dossier de projet. En conséquence, on chang
 Même après le changement de spec et l'optimisation, je n'ai pas réussi à réduire la taille du modèle. En principe on devrait avoir les mêmes résultats que dans  3.1.4- Résultat(Méthode1).
 J'ai mis le code que j'ai modifié dans le dossier de la deuxième méthode.
 
-##Ressources :
+## Ressources :
 - https://docs.arduino.cc/tutorials/nano-33-ble-sense/edge-impulse
 - https://docs.edgeimpulse.com/docs/development-platforms/officially-supported-mcu-targets/arduino-nano-33-ble-sense 
 - https://docs.edgeimpulse.com/experts/machine-learning-prototype-projects/tinyml-gastroscopic-image-processing
