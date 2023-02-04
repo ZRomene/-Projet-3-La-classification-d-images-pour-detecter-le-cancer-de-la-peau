@@ -32,7 +32,7 @@ Le processeur est caractérisé par :
 * 1 MB Flash + 256 KB RAM
 
 Ce qui nous intéresse dans ce projet c'est le module caméra OV7675 qui sera fixée sur une carte d'interface ou autrement dit un bouclier ( shield en anglais). Cette carte d'extension Arduino est déjà incluse dans le kit et sert à faciliter la fixation des composants. 
-![] (OV7675.png "Le module caméra OV7675")
+![](OV7675.png "Le module caméra OV7675")
 Avant de commencer le projet, il est important de tester le bon fonctionnement de Hardware afin d'éviter toute sorte de problème. On a fait ça en suivant [ce tutoriel][df1] (page 24). 
 Les caractéristiques de ce module sont: 
 - Image Sensor: OV7675
@@ -48,12 +48,12 @@ Les caractéristiques de ce module sont:
 ## 2- La base de données (Database)
 On utilise dans ce projet [la banque de données suivante][df2]. Elle est constituée de 2357 images de maladies oncologiques malignes et bénignes, qui ont été formées à partir de l'International Skin Imaging Collaboration (ISIC). Toutes les images ont été triées selon la classification prise avec ISIC selon le type de cancer : kératose actinique, carcinome basocellulaire , dermatofibrome, mélanome, naevus , kératose bénigne pigmentée, kératose séborrhéique, carcinome squameux et lésion vasculaire. 
 Puisqu'il s'agit d'un projet académique, on a choisi Le mélanome car la quantité d'images et légèrement dominate. On utilise 16 images pour le test et 430 images pour entrainer le modèle.
-![] (melanome.png "Quelques images du mélanome")
+![](melanome.png "Quelques images du mélanome")
 Pour information, le mélanome est en général Asymétrique, il a des Bords irréguliers, encochés, polycycliques, une Couleur inhomogène, allant du brun clair au noir foncé, un diamètre en général supérieur à 6 mm.
 
 Afin d'établir une classification binaire, on a collecté une base d'images de peaux normales et saines ( non atteintes de cancer) d'aprés [un site internet][df3]. Et on les a convertis du format *.tif* au format *.jpg*.
 On utilise pour ce projet 16 images de peau normale pour le test et 430 pour l'entraînement.
-![] (safeskin.png "Peau nette normale")
+![](safeskin.png "Peau nette normale")
 La couleur de la peau humaine normale est, dans la majorité des cas, homogène, nette et d'une couleur unie. En général, elle ne contient pas des tâches ou des changements brusques de couleur. Bien évidemment, ça peut y arriver. Mais au cours de ce projet on traite le cas le plus simple et plus visible pour détecter le cancer parce que le module caméra de TinyMl n'est pas une caméra médicale.
 
 ## 3- Entrainement du modéle et résultats
@@ -72,13 +72,13 @@ Il faut créer un compte Edge impulse et connecter la carte en utilisant cette [
 edge-impulse-daemon
 ```
 Ceci va nous permettre de connecter la carte directement au compte Edge Impulse en écrivant juste l'adresse et le mot de passe. Par la suite, la carte sera visible sur le tableau de bord d'Edge Impulse.
-![] (device connected.png "Zaynab's Arduino Nano 33 BLE Sense")
+![](device connected.png "Zaynab's Arduino Nano 33 BLE Sense")
 ##### 3-1-2-2- Acquérir des données
 Une fois les images téléchargées et étiquetées, il faut s'assurer d'avoir un bon ratio de répartition des données d'entraînement / test d'environ 80/20 pour les données de tests et pour les données d'entrainement.
 
-![] (testing_data.png "Données de test")
+![](testing_data.png "Données de test")
 
-![] (Training_data.png "Données d'entraînement")
+![](Training_data.png "Données d'entraînement")
 
 ##### 3-1-2-3- Créer une impulse 
 Dans le menu, accédez à "Créer Impulse" sous "Impulse Design" et ajoutez un bloc de traitement d'images ainsi qu'un bloc d'apprentissage Transfer Learning 
