@@ -25,18 +25,18 @@ Le but de ce projet est d'analyser les images afin de détecter la présence d'u
 [Ressouces](#ressources)  
 
 ## 1- Matériel utilisé (Hardware)
-Nous utilisons le Kit d'apprentissage Tiny ML d'arduino pour explorer l'Embedded Machine Learning.C'est une nouvelle technologie qui active l'intelligence artificielle juste à côté du monde physique à l'aide des données récupérées par les capteurs. Ce kit comprend un Arduino Nano 33 BLE Sense. Il est basé sur le microcontrôleur nRF52840 et fonctionne sur le système d'exploitation Arm® Mbed™. Le Nano 33 BLE Sense offre non seulement la possibilité de se connecter via Bluetooth® Low Energy, mais est également équipée de capteurs pour détecter la couleur, la proximité, le mouvement, la température, l'humidité, l'audio et plus encore. Vous pouvez cliquer sur l'image ci-dessous pour plus de détails ou bien il suffit de lire [le datasheet de la carte][df4]. 
-[![N|Solid](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7IfVcPvM7SwqYIDul2PXhhBmPBYTT7S1rNZ-sMr3BMiu8tbeMrWcBBKtpYS2mg7CYHs4&usqp=CAU)](https://docs.arduino.cc/hardware/nano-33-ble-sense) 
+Nous utilisons le Kit d'apprentissage Tiny ML d'arduino pour explorer l'Embedded Machine Learning.C'est une nouvelle technologie qui active l'intelligence artificielle juste à côté du monde physique à l'aide des données récupérées par les capteurs. Ce kit comprend un Arduino Nano 33 BLE Sense. Il est basé sur le microcontrôleur nRF52840 et fonctionne sur le système d'exploitation Arm® Mbed™. Le Nano 33 BLE Sense offre non seulement la possibilité de se connecter via Bluetooth® Low Energy, mais est également équipée de capteurs pour détecter la couleur, la proximité, le mouvement, la température, l'humidité, l'audio et plus encore. Vous pouvez cliquer sur l'image ci-dessous pour plus de détails ou bien il suffit de lire [le datasheet de la carte][df4].  
+[![N|Solid](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7IfVcPvM7SwqYIDul2PXhhBmPBYTT7S1rNZ-sMr3BMiu8tbeMrWcBBKtpYS2mg7CYHs4&usqp=CAU)](https://docs.arduino.cc/hardware/nano-33-ble-sense)  
 
 Le processeur est caractérisé par : 
 * 64 MHz Arm® Cortex-M4F (with FPU)
-* 1 MB Flash + 256 KB RAM
+* 1 MB Flash + 256 KB RAM  
 
-Ce qui nous intéresse dans ce projet c'est le module caméra OV7675 qui sera fixée sur une carte d'interface ou autrement dit un bouclier ( shield en anglais). Cette carte d'extension Arduino est déjà incluse dans le kit et sert à faciliter la fixation des composants. 
+Ce qui nous intéresse dans ce projet c'est le module caméra OV7675 qui sera fixée sur une carte d'interface ou autrement dit un bouclier ( shield en anglais). Cette carte d'extension Arduino est déjà incluse dans le kit et sert à faciliter la fixation des composants.  
 
-![](OV7675.png "Le module caméra OV7675")
+![](OV7675.png "Le module caméra OV7675")  
 
-Avant de commencer le projet, il est important de tester le bon fonctionnement de Hardware afin d'éviter toute sorte de problème. On a fait ça en suivant [ce tutoriel][df1] (page 24). 
+Avant de commencer le projet, il est important de tester le bon fonctionnement de Hardware afin d'éviter toute sorte de problème. On a fait ça en suivant [ce tutoriel][df1] (page 24).   
 Les caractéristiques de ce module sont: 
 - Image Sensor: OV7675
 - Image Area: 1640 x 1220 µm
@@ -80,7 +80,7 @@ edge-impulse-daemon
 ```
 Ceci va nous permettre de connecter la carte directement au compte Edge Impulse en écrivant juste l'adresse et le mot de passe. Par la suite, la carte sera visible sur le tableau de bord d'Edge Impulse.
 
-![](device connected.png "Zaynab's Arduino Nano 33 BLE Sense")
+![](device_connected.png "Zaynab's Arduino Nano 33 BLE Sense")
 
 ##### 3-1-2-2- Acquérir des données
 Une fois les images téléchargées et étiquetées, il faut s'assurer d'avoir un bon ratio de répartition des données d'entraînement / test d'environ 80/20 pour les données de tests et pour les données d'entrainement.
