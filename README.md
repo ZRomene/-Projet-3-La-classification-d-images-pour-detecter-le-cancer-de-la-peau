@@ -106,13 +106,13 @@ On passe ensuite à la génération des caractéristiques à partir des données
 ![](Generate_features.png " Visualisation 2D")  
 
 ##### 3-1-2-4- Former le modèle 
-Suite à l'utilisation de mobile net V2 0.35, j'ai obtenu un modèle qui occupe 346.9k de la RAM. Ceci est inacceptable étant donnée que la RAM de ma carte est 256k. Pour corriger ce problème, j'avais le choix entre réduire les dimensions des images utilisées et changer l'architecture du modèle au Mobile Net V2 0.2. Après plusieurs essais, j'ai opté pour le changement de l'architecture. 
+Suite à l'utilisation de mobile net V2 0.35, j'ai obtenu un modèle qui occupe 346.9k de la RAM. Ceci est inacceptable étant donnée que la RAM de ma carte est 256k. Pour corriger ce problème, j'avais le choix entre réduire les dimensions des images utilisées et changer l'architecture du modèle au Mobile Net V2 0.2. Après plusieurs essais, j'ai opté pour le changement de l'architecture.   
 
-![](parametres.png “”)  
+![](parametres.png)  
 
 Le choix prix m'a donné des résultats très satisfaisantes. La précision de modèle est de 98.6%. Et le taille de modèle est 130.9k ce qui est totalement acceptable (<256 k).
 
-![](resultat.png “”)  
+![](resultat.png)   
 
 ##### 3-1-2-5- Tester est télécharger le modèle 
 Afin de vérifier les perfomances du modéle, j'ai testé le modéle sur Edge Impulse avant de le déployer.
@@ -165,11 +165,15 @@ Après plusieurs tests, j'ai remarqué que les résultats du modèle sont bien p
 
 ### 3-2- Méthode2: Entraînement du modéle avec Jupyter Notebook
 #### 3-2-1- Le software utilisé
-Jupyter notebook c'est un outil qui permet d'exécuter des lignes de code en python. Il est utilisé pour des nombreuses applications comme l'analyse de données ou le traitement d'images. Dans notre cas, on l'utilise pour entrainer et générer un modèle de machine Learning.
-[![N|Solid](https://docs.servicestack.net/assets/jupyter-python.6188762b.png)](https://jupyter.org/) 
-Bien évidemment , on utilise l'IDE de la carte Arduino pour la programmation de la carte et pour utiliser le modèle entrainé. Vous pouvez avoir plus d'informations en cliquant sur l'image suivante:
-[![N|Solid](https://www.1min30.com/wp-content/uploads/2018/12/Logo-Arduino-1.jpg)](https://www.arduino.cc/)
-J'ai choisi, cette fois-ci, d'utiliser Google Colab pour écrire le notebook. Colab est un environnement particulièrement adapté au machine learning. Il permet à n'importe qui d'écrire et d'exécuter le code Python de son choix par le biais du navigateur.   
+Jupyter notebook c'est un outil qui permet d'exécuter des lignes de code en python. Il est utilisé pour des nombreuses applications comme l'analyse de données ou le traitement d'images. Dans notre cas, on l'utilise pour entrainer et générer un modèle de machine Learning.  
+
+[![N|Solid](https://docs.servicestack.net/assets/jupyter-python.6188762b.png)](https://jupyter.org/)  
+
+Bien évidemment , on utilise l'IDE de la carte Arduino pour la programmation de la carte et pour utiliser le modèle entrainé. Vous pouvez avoir plus d'informations en cliquant sur l'image suivante:  
+
+[![N|Solid](https://www.1min30.com/wp-content/uploads/2018/12/Logo-Arduino-1.jpg)](https://www.arduino.cc/)  
+
+J'ai choisi, cette fois-ci, d'utiliser Google Colab pour écrire le notebook. Colab est un environnement particulièrement adapté au machine learning. Il permet à n'importe qui d'écrire et d'exécuter le code Python de son choix par le biais du navigateur.  
 
 [![N|Solid](colab.png)](https://colab.research.google.com/)  
 
