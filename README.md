@@ -4,9 +4,9 @@
 Le but de ce projet est d'analyser les images afin de détecter la présence d'un cancer de la peau. Puisque c'est un projet académique, on s'est concentré sur un seul type de cancer "le mélanome". Il s'agit alors d'une classification binaire. C'est-à-dire l'algorithme détecte s'il s'agit d'un cancer mélanome ou bien un cas normal. À chaque fois le mélanome est détecté  avec un pourcentage qui dépasse 80%, on fait clignoter la LED. Ceci est fait à l'aide d'un modèle d'intelligence artificielle qu'on va entrainer de deux manières différentes.
 
 # Table des matières
-1- Matériel utilisé (Hardware)  
-2- La base de données (Database)  
-3- Entrainement du modéle et résultats   
+[1- Matériel utilisé (Hardware)]()   
+[2- La base de données (Database) ]()    
+[3- Entrainement du modéle et résultats]()      
 &nbsp;&nbsp;&nbsp;&nbsp; [3-1- Méthode1: Entraînement du modéle avec EDGE IMPULSE]()   
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [3-1-1-Le software utilisé]()  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [3-1-2-Les étapes d'entrainement]()  
