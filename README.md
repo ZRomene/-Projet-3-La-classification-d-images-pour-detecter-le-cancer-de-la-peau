@@ -22,7 +22,7 @@ Le but de ce projet est d'analyser les images afin de détecter la présence d'u
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [3-2-2- Les étapes d'entrainement]()  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [3-2-3- Partie Arduino (Méthode2)]()  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [3-2-4- Résultat (Méthode2)]()  
-[Ressouces](## Ressources :)  
+[Ressouces](##Ressources :)  
 
 ## 1- Matériel utilisé (Hardware)
 Nous utilisons le Kit d'apprentissage Tiny ML d'arduino pour explorer l'Embedded Machine Learning.C'est une nouvelle technologie qui active l'intelligence artificielle juste à côté du monde physique à l'aide des données récupérées par les capteurs. Ce kit comprend un Arduino Nano 33 BLE Sense. Il est basé sur le microcontrôleur nRF52840 et fonctionne sur le système d'exploitation Arm® Mbed™. Le Nano 33 BLE Sense offre non seulement la possibilité de se connecter via Bluetooth® Low Energy, mais est également équipée de capteurs pour détecter la couleur, la proximité, le mouvement, la température, l'humidité, l'audio et plus encore. Vous pouvez cliquer sur l'image ci-dessous pour plus de détails ou bien il suffit de lire [le datasheet de la carte][df4].  
@@ -294,7 +294,7 @@ On ajoute alors "model.cpp" dans le dossier de projet. En conséquence, on chang
 Même après le changement de spec et l'optimisation, je n'ai pas réussi à réduire la taille du modèle. En principe on devrait avoir les mêmes résultats que dans  3.1.4- Résultat(Méthode1).
 J'ai mis le code que j'ai modifié dans le dossier de la deuxième méthode.
 
-## Ressources :
+##Ressources :
 - https://docs.arduino.cc/tutorials/nano-33-ble-sense/edge-impulse
 - https://docs.edgeimpulse.com/docs/development-platforms/officially-supported-mcu-targets/arduino-nano-33-ble-sense 
 - https://docs.edgeimpulse.com/experts/machine-learning-prototype-projects/tinyml-gastroscopic-image-processing
