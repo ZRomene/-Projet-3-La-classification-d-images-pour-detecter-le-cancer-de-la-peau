@@ -168,9 +168,9 @@ Jupyter notebook c'est un outil qui permet d'exécuter des lignes de code en pyt
 [![N|Solid](https://docs.servicestack.net/assets/jupyter-python.6188762b.png)](https://jupyter.org/) 
 Bien évidemment , on utilise l'IDE de la carte Arduino pour la programmation de la carte et pour utiliser le modèle entrainé. Vous pouvez avoir plus d'informations en cliquant sur l'image suivante:
 [![N|Solid](https://www.1min30.com/wp-content/uploads/2018/12/Logo-Arduino-1.jpg)](https://www.arduino.cc/)
-J'ai choisi, cette fois-ci, d'utiliser Google Colab pour écrire le notebook. Colab est un environnement particulièrement adapté au machine learning. Il permet à n'importe qui d'écrire et d'exécuter le code Python de son choix par le biais du navigateur. 
+J'ai choisi, cette fois-ci, d'utiliser Google Colab pour écrire le notebook. Colab est un environnement particulièrement adapté au machine learning. Il permet à n'importe qui d'écrire et d'exécuter le code Python de son choix par le biais du navigateur.   
 
-[![N|Solid](colab.png)](https://colab.research.google.com/)
+[![N|Solid](colab.png)](https://colab.research.google.com/)  
 
 #### 3-2-2- Les étapes d'entrainement
 Pour entraîner le modèle d'apprentissage automatique et en profondeur, on peut utiliser un jupyter notebook qu'on le programme en Python. J'ai utilisé pour ce faire, l'environnement  google collab pour écrire le notebook [Skin-Cancer-Classifier ][df5].
